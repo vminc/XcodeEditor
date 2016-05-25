@@ -112,7 +112,7 @@ We can add/update linker flags, header search paths, C-flags, etc to a target.  
 XCTarget* target = [_project targetWithName:_projectName];
 for (NSString* configName in [target configurations])
 {
-    XCBuildConfiguration* configuration = [target configurationWithName:configName];
+    XCProjectBuildConfig* configuration = [target configurationWithName:configName];
     NSMutableArray* headerPaths = [[NSMutableArray alloc] init];
     [headerPaths addObject:@"$(inherited)"];
     [headerPaths addObject:@"$(SRCROOT)/include"];        
